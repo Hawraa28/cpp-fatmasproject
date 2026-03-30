@@ -2,23 +2,42 @@
 using namespace std;
 
 int main() {
-    float m1, m2, m3, average;
+    int choice;
 
-    cout << "Enter marks for 3 subjects:\n";
-    cin >> m1 >> m2 >> m3;
+    
+    cout << "============================================" << endl;
+    cout << "   BUSINESS MANAGEMENT INFORMATION SYSTEM   " << endl;
+    cout << "============================================" << endl;
+    
+    cout << "Select an option to view details:" << endl;
+    cout << "1. Definition of Management" << endl;
+    cout << "2. Management Departments" << endl;
+    cout << "3. Management Functions" << endl;
+    cout << "4. Exit" << endl;
+    cout << "--------------------------------------------" << endl;
+    cout << "Enter your choice (1-4): ";
+    cin >> choice;
 
-    average = (m1 + m2 + m3) / 3;
+    cout << "\n--- Result ---" << endl;
 
-    cout << "Average = " << average << endl;
+    // استخدام Switch Case يجعل الكود احترافياً جداً
+    switch(choice) {
+        case 1:
+            cout << "Definition: Organizing and planning company work to achieve success." << endl;
+            break;
+        case 2:
+            cout << "Departments:\n\t- Financial Management\n\t- Human Resources (HR)\n\t- Marketing" << endl;
+            break;
+        case 3:
+            cout << "Functions:\n\tPlanning - Organizing - Directing - Controlling" << endl;
+            break;
+        case 4:
+            cout << "Exiting program... Goodbye!" << endl;
+            break;
+        default:
+            cout << "Invalid choice! Please run the program again." << endl;
+    }
 
-    if (average >= 90)
-        cout << "Grade: A" << endl;
-    else if (average >= 75)
-        cout << "Grade: B" << endl;
-    else if (average >= 60)
-        cout << "Grade: C" << endl;
-    else
-        cout << "Grade: Fail" << endl;
-
+    cout << "--------------------------------------------" << endl;
     return 0;
 }
